@@ -1,4 +1,5 @@
 import * as React from "react"
+import { graphql } from 'gatsby'
 import Header from "../components/header"
 import HeroImg from "../components/heroImg"
 
@@ -35,7 +36,7 @@ const links = [
 ]
 
 // markup
-const IndexPage = () => {
+const IndexPage = ({data}) => {
   return (
     <main>
       <Header siteTitle="GabeisGunk" links={links} />
@@ -63,4 +64,16 @@ const IndexPage = () => {
   )
 }
 
+export const query = graphql`
+  query HomePageQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          html
+          tableOfContents
+        }
+      }
+    }
+  }
+`
 export default IndexPage
