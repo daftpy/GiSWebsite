@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql } from 'gatsby'
 import Header from "../components/header"
 import HeroImg from "../components/heroImg"
+import Article from "../components/article"
 
 // data
 const links = [
@@ -39,27 +40,40 @@ const links = [
 const IndexPage = ({data}) => {
   return (
     <main>
-      <Header siteTitle="GabeisGunk" links={links} />
-      <HeroImg />
-      <title>GabeisGunk</title>
-      {/* {links.map(link => (
-        <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-          <span>
-            <a
-              style={linkStyle}
-              href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-            >
-              {link.text}
-            </a>
-            {link.badge && (
-              <span style={badgeStyle} aria-label="New Badge">
-                NEW!
-              </span>
-            )}
-            <p style={descriptionStyle}>{link.description}</p>
-          </span>
-        </li>
-      ))} */}
+      <div className="container">
+        <Header siteTitle="GabeisGunk" links={links} />
+        <HeroImg />
+        <div className="bottomFold">
+          <div className="articles">
+            <title>GabeisGunk</title>
+            <h2>Articles</h2>
+            <Article
+              articleTitle={data.allMarkdownRemark.edges[0].node.frontmatter.title}
+              articleBody={data.allMarkdownRemark.edges[0].node.html}
+              articleDate={data.allMarkdownRemark.edges[0].node.frontmatter.date}
+            />
+          </div>
+        </div>
+        {/* <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[0].node.html}}></div> */}
+        {/* {links.map(link => (
+          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
+            <span>
+              <a
+                style={linkStyle}
+                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+              >
+                {link.text}
+              </a>
+              {link.badge && (
+                <span style={badgeStyle} aria-label="New Badge">
+                  NEW!
+                </span>
+              )}
+              <p style={descriptionStyle}>{link.description}</p>
+            </span>
+          </li>
+        ))} */}
+      </div>
     </main>
   )
 }
@@ -69,11 +83,15 @@ export const query = graphql`
     allMarkdownRemark {
       edges {
         node {
+          id
           html
-          tableOfContents
+          frontmatter {
+            title
+            date
+          }
         }
       }
     }
-  }
+  }  
 `
 export default IndexPage

@@ -5,7 +5,10 @@ html {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Passion One', cursive;
-    color: #FAFFD8;    
+    color: #FAFFD8;
+}
+.articles {
+    padding: 1em;
 }
 .siteContainer {
     display: flex;

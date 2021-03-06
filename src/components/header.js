@@ -20,7 +20,7 @@ export default class Header extends React.Component {
     render() {
         return ( <div className={headerStyles.header}>
             <div class={headerStyles.headerContainer}>
-                <h1 class={headerStyles.brand}>{this.props.siteTitle}</h1>
+                <div className={headerStyles.branding}>{this.props.siteTitle}</div>
                 <div class={headerStyles.navbarContainer}>
                     <ul class={headerStyles.navbar}>
                         {this.props.links.map(link => (
