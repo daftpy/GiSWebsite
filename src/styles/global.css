@@ -1,0 +1,40 @@
+html {
+    background-color: #000000;
+    color: #f8f9fa;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Passion One', cursive;
+    color: #FAFFD8;    
+}
+.siteContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1em;
+    flex-grow: 1;
+}
+.articleContainer {
+    padding: 0 1em 0 0;
+}
+.socialFeedContainer {
+    padding: 0 0 0 1em;
+}
+.siteFooter {
+    margin-top: 2em;
+    padding: 1em;
+    background:#2A1A1F;
+    color:#BCA3AC;
+}
+button {
+    background: none;
+    border: none;
+}
+.tiktok-embed {
+    min-width: 300px;
+}
