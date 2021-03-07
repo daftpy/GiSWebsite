@@ -89,7 +89,7 @@ button {
         flex-direction: column;
     }
     .schedule {
-        padding: 1em 2em;
+        padding: 0 2em;
     }
     .icons {
         font-size: 24px;
