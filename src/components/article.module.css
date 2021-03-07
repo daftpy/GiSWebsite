@@ -2,6 +2,11 @@
     color: #BCA3AC;
     font-family: 'Open Sans', sans-serif;
 }
+.articleMetaContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .date {
     color: #BCA3AC;
 }

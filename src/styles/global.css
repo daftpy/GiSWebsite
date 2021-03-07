@@ -7,32 +7,58 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Passion One', cursive;
     color: #FAFFD8;
 }
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.bottomFold {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    margin-bottom: 4em;
+}
 .articles {
     padding: 1em;
 }
-.siteContainer {
+.footer {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-}
-.contentContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 1em;
-    flex-grow: 1;
-}
-.articleContainer {
-    padding: 0 1em 0 0;
-}
-.socialFeedContainer {
-    padding: 0 0 0 1em;
-}
-.siteFooter {
-    margin-top: 2em;
-    padding: 1em;
+    padding-bottom: 1em;
     background:#2A1A1F;
     color:#BCA3AC;
+}
+.contactContainer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: left;
+    padding: 1em;
+}
+.contact {
+    padding: 0 .5em 0 0;
+    flex-grow: 1;
+}
+.contact a {
+    text-decoration: none;
+    color: #FAFFD8;
+}
+.schedule {
+    padding: 0 0 0 .5em;
+    flex-grow: 2;
+}
+.socialLinkContainer {
+    padding: 1em;
+    flex-grow: 2;
+}
+.icons {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.socialFeed {
+    padding: 1em;
 }
 button {
     background: none;
@@ -40,4 +66,49 @@ button {
 }
 .tiktok-embed {
     min-width: 300px;
+}
+
+.blue-button {
+    margin-right: 1em;
+    background: #3066BE;
+    padding: .25em 1em;
+    border-radius: 8px;
+    border: none;
+    filter: drop-shadow(0 0 3px rgb(26, 26, 26));
+    color: #FAFFD8;
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+    .bottomFold {
+        flex-direction: row;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .schedule {
+        padding: 1em 2em;
+    }
+    .icons {
+        font-size: 24px;
+    }
+
+}
+@media (min-width: 992px) {
+    .footer {
+        flex-direction: row;
+    }
+    .socialLinkContainer {
+        order: 2;
+    }
+    .icons {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1200px) {
+    .icons {
+        font-size: 24px;
+    }
 }

@@ -11,7 +11,10 @@ export default class Article extends React.Component {
         return ( <div className={articleStyles.article}>
             <h3>{this.props.articleTitle}</h3>
             <div dangerouslySetInnerHTML={{__html: this.props.articleBody}}></div>
-            <span class="date">Posted - {this.props.articleDate}</span>
+            <div className={articleStyles.articleMetaContainer}>
+                <span className={articleStyles.date}>Posted - {this.props.articleDate}</span>
+                <button class="blue-button">Read more</button>
+            </div>
         </div>
         )
     }
