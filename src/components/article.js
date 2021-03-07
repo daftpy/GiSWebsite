@@ -5,18 +5,8 @@ import * as articleStyles from "./article.module.css"
 export default class Article extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     isVisible: false,
-        // };
     }
-    // toggleVisible = () => {
-    //     console.log('clicked')
-    //     this.setState((prevState) => {
-    //         return {
-    //             isVisible: !prevState.isVisible
-    //         };
-    //     })
-    // }
+
     render() {
         return ( <div className={articleStyles.article}>
             <h3>{this.props.articleTitle}</h3>
