@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Header from "../components/header"
 import HeroImg from "../components/heroImg"
 import Article from "../components/article"
+import Footer from "../components/footer"
 
 // data
 const links = [
@@ -109,30 +110,7 @@ const IndexPage = ({data}) => {
             </span>
           </li>
         ))} */}
-        <div className="footer">
-          <div className="contactContainer">
-            <div className="contact">
-              <h2>Contact</h2>
-              <p>For inquiries contact gabeisgunk@gmail.com</p>
-              <p>To contact the webadmin click <a href="#">here</a></p>
-            </div>
-            <div className="schedule">
-              <h2>Schedule</h2>
-              <p>Schedule is subject to change</p>
-              <p><b>Monday-Friday</b> 4PM - 7:30PM PST</p>
-            </div>
-          </div>
-          <div className="socialLinkContainer">
-            <h2>Social</h2>
-            <div class="icons">
-              <div><i class="fab fa-twitch fa-3x"></i></div>
-              <div><i class="fab fa-instagram fa-3x"></i></div>
-              <div><i class="fab fa-tiktok fa-3x"></i></div>
-              <div><i class="fab fa-soundcloud fa-3x"></i></div>
-              <div><i class="fab fa-youtube fa-3x"></i></div>
-            </div>
-          </div>
-        </div>
+        <Footer />
       </div>
     </main>
   )
