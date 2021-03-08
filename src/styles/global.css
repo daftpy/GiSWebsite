@@ -22,9 +22,14 @@ h1, h2, h3, h4, h5, h6 {
 .articles {
   padding: 1em;
 }
-
 .socialFeed {
   padding: 1em;
+  max-width: 330px;
+}
+.embedWrapper {
+  background: #ffffff;
+  padding: .1em;
+  border-radius: 6px;
 }
 button {
   background: none;

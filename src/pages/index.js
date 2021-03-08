@@ -90,7 +90,9 @@ const IndexPage = ({data, pageContext}) => {
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed elit accumsan, porttitor diam ut, pharetra ligula. In ac imperdiet mauris.
             </p>
-            <div dangerouslySetInnerHTML={{__html: pageContext.tiktok_embed}}></div>
+            <div className="embedWrapper">
+              <div className="testy" dangerouslySetInnerHTML={{__html: pageContext.tiktok_embed}}></div>
+            </div>
           </div>
         </div>
         {/* <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[0].node.html}}></div> */}
