@@ -4,6 +4,7 @@ import Header from "../components/header"
 import HeroImg from "../components/heroImg"
 import Article from "../components/article"
 import Footer from "../components/footer"
+import YAMLDATA from "../../_tiktok/tiks.yaml"
 
 // data
 const links = [
@@ -89,6 +90,7 @@ const IndexPage = ({data}) => {
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed elit accumsan, porttitor diam ut, pharetra ligula. In ac imperdiet mauris.
             </p>
+            <p>{YAMLDATA.recent_tiktok}</p>
           </div>
         </div>
         {/* <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[0].node.html}}></div> */}
