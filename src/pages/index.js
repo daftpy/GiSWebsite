@@ -69,7 +69,7 @@ const socialLinks = [
 ]
 
 // markup
-const IndexPage = ({data}) => {
+const IndexPage = ({data, pageContext}) => {
   return (
     <main>
       <div className="container">
@@ -90,7 +90,7 @@ const IndexPage = ({data}) => {
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed elit accumsan, porttitor diam ut, pharetra ligula. In ac imperdiet mauris.
             </p>
-            <p>{YAMLDATA.recent_tiktok}</p>
+            <div dangerouslySetInnerHTML={{__html: pageContext.tiktok_embed}}></div>
           </div>
         </div>
         {/* <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[0].node.html}}></div> */}
